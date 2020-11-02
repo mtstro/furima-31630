@@ -29,11 +29,11 @@
 | ------------ | ---------- | ------------------------------ |
 | name         | string     | null: false                    |
 | about        | text       | null: false                    |
-| category_id  | string     | null: false                    |
-| status_id    | string     | null: false                    |
-| ship_cost_id | string     | null: false                    |
-| ship_from_id | string     | null: false                    |
-| ship_date_id | string     | null: false                    |
+| category_id  | integer    | null: false                    |
+| status_id    | integer    | null: false                    |
+| ship_cost_id | integer    | null: false                    |
+| ship_from_id | integer    | null: false                    |
+| ship_date_id | integer    | null: false                    |
 | price        | integer    | null: false                    |
 | user         | references | null: false, foreign_key: true |
 
@@ -63,10 +63,11 @@
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | post_code | string     | null: false                    |
-| region_id | string     | null: false                    |
+| region_id | integer    | null: false                    |
 | city      | string     | null: false                    |
 | address   | string     | null: false                    |
-| phone_num | integer    | null: false                    |
+| building  | string     |                                |
+| phone_num | string     | null: false                    |
 | order     | references | null: false, foreign_key: true |
 
 
