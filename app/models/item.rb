@@ -3,7 +3,14 @@ class Item < ApplicationRecord
 
 
   belongs_to :user
+  has_one_attached :image
 
+  with_options presence: true do
+    validates :name
+    validates :about 
+    validates :price
+    validates :image
+  end
 
   extend ActiveHash::Association::ActiveRecordExtensions
   belongs_to :category
@@ -19,10 +26,6 @@ class Item < ApplicationRecord
     validates :region_id
     validates :ship_date_id
   end
-  with_options presence: true do
-    validates :name
-    validates :about 
-    validates :price
-  end
+
 
 end
