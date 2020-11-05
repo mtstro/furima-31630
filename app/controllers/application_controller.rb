@@ -3,11 +3,6 @@ class ApplicationController < ActionController::Base
 
   private
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:fam_name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:fir_name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:fam_name_read])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:fir_name_read])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :fam_name, :fir_name, :fam_name_read, :fir_name_read, birthday, ])
   end
 end
