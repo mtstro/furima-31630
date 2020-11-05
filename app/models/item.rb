@@ -12,7 +12,7 @@ class Item < ApplicationRecord
     validates :image
   end
 
-  extend ActiveHash::Association::ActiveRecordExtensions
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :status
   belongs_to :ship_cost
