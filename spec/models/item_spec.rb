@@ -52,6 +52,36 @@ RSpec.describe Item, type: :model do
       expect(@item.errors.full_messages).to include("Ship date must be other than 1")
     end
 
+    it "category_idが空では出品できない" do
+      @item.category_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Category can't be blank")
+    end
+
+    it "status_idが空では出品できない" do
+      @item.status_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Status can't be blank")
+    end
+
+    it "ship_cost_idが空では出品できない" do
+      @item.ship_cost_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Ship cost can't be blank")
+    end
+
+    it "region_idが空では出品できない" do
+      @item.region_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Region can't be blank")
+    end
+
+    it "ship_date_idが空では出品できない" do
+      @item.ship_date_id = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Ship date can't be blank")
+    end
+
     it "priceが空では出品できない" do
       @item.price = nil
       @item.valid?
