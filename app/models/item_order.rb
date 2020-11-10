@@ -6,7 +6,7 @@ class ItemOrder
     validates :city, :address, :token
     validates :region_id,   numericality: { other_than: 1 }
     validates :post_code,   format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
-    validates :phone_num,   format: { with: /\A[0-9]+\z/, message: "is invalid. Only integer"}
+    validates :phone_num,   format: { with: /\A[0-9]{,11}\z/, message: "is invalid. Only integer"}
   end
 
   def save
